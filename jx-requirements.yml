@@ -3,7 +3,7 @@ autoUpdate:
   schedule: ""
 bootConfigURL: https://github.com/jenkins-x/jenkins-x-boot-config.git
 cluster:
-  clusterName: dev-humn-jenkinsx
+  clusterName: humnoss
   devEnvApprovers:
   - humnandy
   environmentGitOwner: humn-ai
@@ -16,7 +16,7 @@ cluster:
   registry: https://registry.hub.docker.com/v2/
 environments:
 - ingress:
-    domain: 34.248.241.225.nip.io
+    domain: 
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
@@ -24,7 +24,7 @@ environments:
       enabled: false
       production: false
   key: dev
-  repository: environment-callum-dev-humn-jenkinsx-dev
+  repository: env-humnoss-dev
 - ingress:
     domain: ""
     externalDNS: false
@@ -34,7 +34,7 @@ environments:
       enabled: false
       production: false
   key: staging
-  repository: environment-callum-dev-humn-jenkinsx-staging
+  repository: env-humnoss-staging
 - ingress:
     domain: ""
     externalDNS: false
@@ -44,10 +44,10 @@ environments:
       enabled: false
       production: false
   key: production
-  repository: environment-callum-dev-humn-jenkinsx-production
+  repository: env-humnoss-prod
 gitops: true
 ingress:
-  domain: 34.248.241.225.nip.io
+  domain:
   externalDNS: false
   namespaceSubDomain: -jx.
   tls:
@@ -59,17 +59,17 @@ repository: nexus
 secretStorage: local
 storage:
   backup:
-    enabled: false
-    url: ""
+    enabled: true
+    url: s3://jenkinsx-storage-bucket/humnoss/
   logs:
-    enabled: false
-    url: ""
+    enabled: true
+    url: s3://jenkinsx-storage-bucket/humnoss/logs.txt
   reports:
-    enabled: false
-    url: ""
+    enabled: true
+    url: s3://jenkinsx-storage-bucket/humnoss/reports.txt
   repository:
-    enabled: false
-    url: ""
+    enabled: true
+    url: s3://jenkinsx-storage-bucket/humnoss/repository.txt
 vault: {}
 velero:
   schedule: ""
