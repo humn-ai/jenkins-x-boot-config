@@ -1,7 +1,7 @@
 autoUpdate:
   enabled: false
   schedule: ""
-bootConfigURL: https://github.com/jenkins-x/jenkins-x-boot-config.git
+bootConfigURL: git@github.com:humn-ai/jenkins-x-boot-config.git
 cluster:
   clusterName: humnoss
   devEnvApprovers:
