@@ -1,0 +1,10 @@
+adminUser:
+  password: local:dev-humn-jenkinsx/adminUser:password
+  username: Admin
+enableDocker: false
+pipelineUser:
+  email: callum@humn.ai
+  token: local:dev-humn-jenkinsx/pipelineUser:token
+  username: humn-bot
+prow:
+  hmacToken: local:dev-humn-jenkinsx/prow:hmacToken
