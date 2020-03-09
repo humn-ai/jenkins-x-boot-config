@@ -16,9 +16,9 @@ cluster:
   registry: https://registry.hub.docker.com/v2/
 environments:
 - ingress:
-    domain: 
+    domain: ""
     externalDNS: false
-    namespaceSubDomain: -jx.
+    namespaceSubDomain: ""
     tls:
       email: ""
       enabled: false
@@ -44,10 +44,10 @@ environments:
       enabled: false
       production: false
   key: production
-  repository: env-humnoss-prod
+  repository: env-humnoss-production
 gitops: true
 ingress:
-  domain:
+  domain: ""
   externalDNS: false
   namespaceSubDomain: -jx.
   tls:
@@ -59,17 +59,17 @@ repository: nexus
 secretStorage: local
 storage:
   backup:
-    enabled: true
-    url: s3://jenkinsx-storage-bucket/humnoss/
+    enabled: false
+    url: s3://jenkinsx-storage-bucket/humn-oss/backup.txt
   logs:
-    enabled: true
-    url: s3://jenkinsx-storage-bucket/humnoss/logs.txt
+    enabled: false
+    url: s3://jenkinsx-storage-bucket/humn-oss/logs.txt
   reports:
-    enabled: true
-    url: s3://jenkinsx-storage-bucket/humnoss/reports.txt
+    enabled: false
+    url: s3://jenkinsx-storage-bucket/humn-oss/reports.txt
   repository:
-    enabled: true
-    url: s3://jenkinsx-storage-bucket/humnoss/repository.txt
+    enabled: false
+    url: s3://jenkinsx-storage-bucket/humn-oss/repository.txt
 vault: {}
 velero:
   schedule: ""
