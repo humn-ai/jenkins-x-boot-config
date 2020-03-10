@@ -1,0 +1,10 @@
+adminUser:
+  password: local:humnoss/adminUser:password
+  username: humn-admin
+enableDocker: false
+pipelineUser:
+  email: bot@humn.ai
+  token: local:humnoss/pipelineUser:token
+  username: humn-bot
+prow:
+  hmacToken: local:humnoss/prow:hmacToken
